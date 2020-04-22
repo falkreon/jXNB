@@ -1,0 +1,24 @@
+buildscript {
+	repositories {
+		mavenCentral();
+	}
+}
+
+apply plugin: "java";
+apply plugin: "eclipse";
+
+group = "blue.endless";
+version = "0.0.1";
+
+sourceCompatibility = 1.8;
+targetCompatibility = 1.8;
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testCompile "junit:junit:4.12";
+	
+	compileOnly group: "com.google.code.findbugs", name: "jsr305", version: "3.0.2";
+}
